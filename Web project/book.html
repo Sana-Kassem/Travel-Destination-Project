@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking and Payment</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="book.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="logo.png">
+      <button class="hamburger-menu" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><span class="separator">|</span>
+        <li><a href="food.html">Culture & Food</a></li><span class="separator">|</span>
+        <li><a href="tips.html">Travel Tips</a></li><span class="separator">|</span>
+        <li><a href="itineraries.html">Itineraries</a></li><span class="separator">|</span>
+        <li><a href="contact.html">Contact Us</a></li><span class="separator">|</span>
+        <li><a href="login.html">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>  
+    <main>
+        <section class="booking-section">
+            <h1>Complete Your Booking</h1>
+            <form id="booking-form"  >
+                <div class="form-group">
+                    <h2>Your Details</h2>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" >
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" >
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                    <select name="itinerary" id="itinerary">
+                      <option value="" disabled selected>Select an Itinerary</option>
+                  </select>
+                  <p id="itinerary-cost">Total Cost: </p>
+                  
+                </div>
+
+                <div class="form-group">
+                    <h2>Payment Details</h2>
+                    <label for="card-name">Name on Card:</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Cardholder's name">
+
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9101 1121" maxlength="14" >
+
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="date" id="expiry-date" name="expiry-date" >
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                    <p id="error-message" class="error-message"></p>
+                </div>
+                <button type="submit" class="btn">Complete Booking</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="success-icon">✔</div>
+            <p>Your booking has been successfully completed!</p>
+            <p>Thank you for choosing us.</p>
+            <button id="ok-button">Go to Home</button>
+        </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://twitter.com" target="_blank">X</a>
+      </div>
+    </footer> 
+</body>
+</html>
